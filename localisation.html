@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Club de scrabble les Grizzly/home</title>
+
+  <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="logo.png" type="image/svg+xml">
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="home.css">
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:wght@400;500;700&display=swap"
+    rel="stylesheet">
+</head>
+
+<body id="top">
+
+  <!-- 
+    - #HEADER
+  -->
+
+    <header class="header" data-header>
+
+    <div class="top-bar">
+      <div class="container">
+      </div>
+    </div>
+
+    <div class="nav-wrapper">
+      <div class="container">
+
+        <h1 class="h1">
+          <a href="./index.html" class="logo">Club des <span class="span">Grizzly</span></a>
+        </h1>
+
+        <nav class="navbar" data-navbar>
+
+        </nav>
+
+        <div class="header-action">
+
+          <div class="search-wrapper" data-search-wrapper>
+
+            <div class="input-wrapper">
+              <input type="search" name="search" placeholder="Search here" class="search-input"
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+  </header>
+
+  <main>
+    <article>
+
+      <!-- 
+        - #HERO
+      -->
+
+      <section class="hero">
+        <div class="container">
+
+          <div class="hero-content">
+
+            <h2 class="h1 hero-title">
+              Le <span class="span">top</span>
+              de la  <span class="span">formation du scrabble.</span>
+            </h2>
+          </div>
+
+          <figure class="hero-banner">
+            <img src="logo.png" width="603" height="634" loading="lazy" alt="Vegetables"
+              class="w-100">
+          </figure>
+        </div>
+      </section>
+
+
+
+  <!-- Section Carte -->
+  <section class="section map">
+    <div class="container">
+      <h2 class="h2 section-title">Localisation</h2>
+      <!-- Carte Google Maps -->
+      <div id="map" style="width: 100%; height: 400px;"></div>
+    </div>
+  </section>
+  <!-- API JavaScript de Google Maps -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAHBVOa352oFW9udwQStIOJ2k7KljydqCA"></script>
+
+  <!-- Initialiser la Carte -->
+  <script>
+    function initMap() {
+      // La localisation de votre lieu (exemple avec Paris)
+        var location = { lat: 6.3885931, lng: 2.3405636 };
+      // Créez la carte, centrée sur la localisation
+      var map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 20, // Niveau de zoom
+        center: location
+      });
+
+      // Créez un marqueur à la localisation
+      var marker = new google.maps.Marker({
+        position: location,
+        map: map
+      });
+    }
+
+    // Initialisez la carte lorsque la fenêtre se charge
+    window.onload = initMap;
+  </script>
+
+  
+
+  <!-- 
+    - #FOOTER
+  -->
+
+  <footer class="footer">
+
+    <div class="footer-top">
+      <div class="container">
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title">Contact</p>
+          </li>
+
+          <li class="footer-item">
+            <div class="contact-icon">
+              <img src="localisation.png" width="20" height="20" alt="">
+            </div>
+
+            <address class="contact-link">
+              Benin, Cotonou, Godomey Aimevo, La tanière 
+            </address>
+            <a href="localisation.html"></a>
+          </li>
+
+          <li class="footer-item">
+            <div class="contact-icon">
+              <img src="Téléphone.png" width="20" height="20" alt="">
+            </div>
+            <a href="#" class="contact-link">+22967119368</a>
+          </li>
+
+          <li class="footer-item">
+            <div class="contact-icon">
+              <img src="Gmail.png" width="20" height="20" alt="">
+            </div>
+
+            <a href="https://mail.google.com/" class="contact-link">deo97015@gmail.com</a>
+          </li>
+
+        </ul>
+
+        <div class="footer-list">
+
+          <p class="footer-list-title">Aller plus loin...</p>
+
+          <p class="newsletter-text">
+            Vous n'avez qu'a vous rendre à notre adresse.
+          </p>
+          
+        </div>
+
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+
+        <p class="copyright">
+          &copy; 2024 <a href="index.html" class="copyright-link">Grizzly'club</a>. All Rights Reserved.
+        </p>
+
+        <ul class="footer-bottom-list">
+
+          <li>
+            <a href="#" class="footer-bottom-link">Term and Service</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-bottom-link">Privacy Policy</a>
+          </li>
+
+        </ul>
+
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- 
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+
+  <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
